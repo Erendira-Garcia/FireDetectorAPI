@@ -11,7 +11,7 @@ app = FastAPI()
 # Cargar el modelo
 model = load_model('model.h5')
 
-@app.post("/predict/")
+@app.post("/predict")
 async def predict(file: UploadFile = File(...)):
     contents = await file.read()
     image_path = "temp_image.jpg"
@@ -27,7 +27,7 @@ async def predict(file: UploadFile = File(...)):
     prediction = model.predict(img_array)
     is_fire = prediction[0][0] >= 0.5
 
-    return {"is_fire": bool(is_fire)}
+    return {"Incendio": bool(is_fire)}
 
 if __name__ == "__main__":
     uvicorn.run(app, host="127.0.0.1", port=8000)
