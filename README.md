@@ -15,7 +15,9 @@ Para ejecutar la API:
   	pip install -r requirements.txt
 
 	- Ejecutar: 
-  	uvicorn main:app --reload
+  	uvicorn main:app --reload 
+        En caso de tener problemas con las configuración del PATH del sistema, usar:  
+	python -m uvicorn main:app --reload 
 
 Para probar la API:
 
@@ -27,23 +29,23 @@ Para probar la API:
 
 	- En la pestaña Body, seleccionar form-data
 
-	- Escribe file en el campo Key y selecciona el tipo File
+	- Escribir file en el campo Key y selecciona el tipo File
 
-	- Sube una imagen en el campo de Value (New file from local machine)
+	- Subir una imagen en el campo de Value (New file from local machine)
 
-	- Presiona Send para relaizar la solicitud 
+	- Presionar Send para relaizar la solicitud 
 
-  En FastAPI:
+  En OpenAPI:
 
-	- Abre http://localhost:8000/docs
+	- Abrir http://localhost:8000/docs
 
-	- Busca el endpoint POST/predict/
+	- Buscar el endpoint POST/predict/
 
-	- Haz clic en el botón Try it out
+	- Dar clic en el botón Try it out
 
-	- Sube una imagen en el campo de archivo
+	- Subir una imagen en el campo de archivo
 
-	- Haz clic en el botón Execute para enviar la solicitud
+	- Dar clic en el botón Execute para enviar la solicitud
 
 
 
